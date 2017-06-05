@@ -13,13 +13,16 @@ if(!isset($_SESSION['admin'])){
 
 $sql2 = "SELECT * FROM user";
 $result = mysqli_query($link, $sql2);
-$row = mysqli_fetch_all($result);
+$users = [];
+while($row = mysqli_fetch_assoc($result)){
+	array_push($users, $row);
+}
 mysqli_close($link);
 
-if(isset($row)){
+if(count($users)){
 	$data = [
 		result => 0,
-		users => $row
+		users => $users
 	];
 }else{
 	$data = [
