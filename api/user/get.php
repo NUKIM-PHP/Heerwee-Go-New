@@ -13,7 +13,7 @@ if(!isset($_SESSION['admin'])){
 
 $sql2 = "SELECT * FROM user";
 $result = mysqli_query($link, $sql2);
-$row = mysqli_fetch_assoc($result);
+$row = mysqli_fetch_all($result);
 mysqli_close($link);
 
 if(isset($row)){
