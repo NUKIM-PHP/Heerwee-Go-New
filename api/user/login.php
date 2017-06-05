@@ -11,10 +11,12 @@ $row = mysqli_fetch_assoc($result);
 mysqli_close($link);
 
 if(isset($row)){
+	$row = $row[0];
 	$data = [
 		result => 0
 	];
 	$_SESSION['user'] = $row['uid'];
+	if($row['isAdmin'] == 1) $_SESSION['isAdmin'] = 1;
 }else{
 	$data = [
 		result => -1,
