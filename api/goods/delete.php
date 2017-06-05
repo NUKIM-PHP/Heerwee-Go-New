@@ -5,7 +5,7 @@ header('Content-type: application/json');
 $id = $_GET['id'];
 
 	if(isset($_GET['id']) && $_GET['check']=='yes'){
-		$sql2 = "DELETE FROM user WHERE userid = '$userid'";
+		$sql2 = "DELETE FROM goods WHERE id = '$id'";
 		mysqli_query($link, $sql2);
 		mysqli_close($link);
 		$data = [
