@@ -2,7 +2,7 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$name= $_POST['name'];
+$name = $_POST['name'];
 $price = $_POST['price'];
 $cat_id = $_POST['cat_id'];
 
