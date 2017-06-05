@@ -12,5 +12,4 @@ $data = [
 	result => 0
 ];
 
-
 echo json_encode($data);
