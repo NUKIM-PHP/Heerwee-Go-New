@@ -82,7 +82,7 @@ $(function(){
 			contentType: false,
 			processData: false,
 			success: function(){
-				// location.reload();
+				location.href('/admin/products.php');
 			}
 		});
 	});
