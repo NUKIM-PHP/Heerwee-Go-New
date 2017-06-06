@@ -2,7 +2,7 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$id = $GET['id'];
+$id = $_GET['id'];
 
 if(!isset($id)){
 	$data = [
