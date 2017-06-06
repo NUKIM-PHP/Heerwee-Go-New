@@ -20,6 +20,16 @@ $(function(){
 		$('.login-box').hide(0).slideDown();
 	});
 
+	$('#link-logout').on('click', function(){
+		$.ajax({
+			url: '/api/user/logout.php',
+			method: 'GET',
+			success: function(data){
+				location.reload();
+			}
+		});
+	});
+
 	$('.login-box').on('click', function(e){
 		e.stopPropagation();
 	})

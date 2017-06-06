@@ -22,8 +22,13 @@
 			<h1><a href="/"><img src="img/logo.png" alt="" id="logo"></a></h1>
 			<div class="user-wrapper">
 				<div class="user">
+					<?php if(isset($_SESSION['user'])){ ?>
+					嗨，<?= $_SESSION['name'] ?>！
+					<a href="#" id="link-logout">登出</a>
+					<?php } else { ?>}
 					<a href="#" id="link-login">登入</a>
 					<a href="/register.php" id="link-register">註冊</a>
+					<?php } ?>
 				</div>
 				<div class="search">
 					<form action="search.php" method="get">
