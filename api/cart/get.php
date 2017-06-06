@@ -30,6 +30,7 @@ $i = 0 ;
 echo $num[0];
 while($row = mysqli_fetch_assoc($result)){
 	$row->num = $num->$i++;
+	var_dump($row);
 	array_push($cart, $row);
 }
 
