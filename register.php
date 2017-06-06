@@ -17,7 +17,7 @@
 				<input type="tel" name="tel">
 				<div class="label">電子信箱</div>
 				<input type="email" name="email">
-				<div class="button">馬上註冊！</div>
+				<input type="submit" value="馬上註冊" class="button">
 			</form>
 		</div>
 <?php require_once('footer.php'); ?>

@@ -32,4 +32,13 @@ mysqli_close($link);
 $data = [
 	result => 0
 ];
+
+$sql2 = "SELECT * FROM user WHERE user='$user' AND pass='$pass'";
+$result = mysqli_query($link, $sql2);
+$row = mysqli_fetch_assoc($result);
+mysqli_close($link);
+
+$_SESSION['user'] = $row['id'];
+$_SESSION['username'] = $row['name'];
+
 echo json_encode($data);

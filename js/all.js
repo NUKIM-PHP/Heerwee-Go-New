@@ -84,5 +84,27 @@ $(function(){
 		if($(this).data('gid')){
 			location.href = '/product.php?id=' + $(this).data('gid');
 		}
-	})
+	});
+
+	$('#register-form').on('submit', function(e){
+		e.preventDefault();
+		var d = $('#register-form').serializeArray();
+		var dd = {};
+		Object.keys(d).forEach((i)=>{
+			candidateData[dd[i].name] = d[i].value;
+		});
+		$.ajax({
+			url: '/api/user/add.php',
+			method: 'POST',
+			dataType: 'ajax',
+			data: dd,
+			success: function(data){
+				if(data.result === 0){
+					location.replace('/');
+				}
+			}
+		})
+	});
+
+
 });
