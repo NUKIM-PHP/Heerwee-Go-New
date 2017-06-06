@@ -30,6 +30,7 @@ error_reporting(E_ALL);
 				<div class="user">
 					<?php if(isset($_SESSION['user'])){ ?>
 					嗨，<?= $_SESSION['username'] ?>！
+					<a href="/cart.php">購物車</a>
 					<a href="#" id="link-logout">登出</a>
 					<?php } else { ?>
 					<a href="#" id="link-login">登入</a>
@@ -41,7 +42,6 @@ error_reporting(E_ALL);
 					<input type="text" id="search" name="s">
 					<input type="submit" class="button" value="搜尋">
 					</form>
-					<a href="/cart.php"><i class="fa fa-shopping-cart"></i></a>
 				</div>
 				<div class="clear"></div>
 				<nav>
