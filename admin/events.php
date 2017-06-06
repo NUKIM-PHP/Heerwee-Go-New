@@ -5,6 +5,11 @@
 	function api($path){
 		return json_decode(file_get_contents('https://nukim-php.noob.tw/api' . $path));
 	}
+	$data = api('/event/getAll.php');
+	if($data->result != 0){
+		header('location: /');
+		exit();
+	}
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
@@ -48,30 +53,16 @@
 					</tr>
 				</thead>
 				<tbody>
+					<?php foreach($data->events as $event): ?>
 					<tr>
 						<td><input type="checkbox"></td>
-						<td>母親節特殊</td>
-						<td>mom.png</td>
-						<td>3</td>
-						<td>2017-06-01</td>
-						<td>2017-07-01</td>
+						<td><?= $event->name ;?></td>
+						<td><?= $event->pic ;?>.jpg</td>
+						<td><?= $event->cat_id ;?></td>
+						<td><?= $event->startdate ;?></td>
+						<td><?= $event->duedate ;?></td>
 					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>母親節特殊</td>
-						<td>mom.png</td>
-						<td>3</td>
-						<td>2017-06-01</td>
-						<td>2017-07-01</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>母親節特殊</td>
-						<td>mom.png</td>
-						<td>3</td>
-						<td>2017-06-01</td>
-						<td>2017-07-01</td>
-					</tr>
+					<?php endforeach; ?>
 				</tbody>
 			</table>
 		</div>
