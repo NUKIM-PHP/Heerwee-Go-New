@@ -116,10 +116,12 @@ $(function(){
 				g_id: gid,
 				num: $('#product-length').val() || 1
 			},
-			success: function(){
-				location.href = '/cart.php';
+			success: function(data){
+				if(data.result === 0){
+					location.href = '/cart.php';
+				}
 			}
-		})
+		});
 	});
 
 });
