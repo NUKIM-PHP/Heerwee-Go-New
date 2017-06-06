@@ -4,7 +4,7 @@ header('Content-type: application/json');
 
 $id = $GET['id'];
 
-if(!isset($s)){
+if(!isset($id)){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
