@@ -26,15 +26,15 @@
 			<div class="clear"></div>
 			<nav>
 				<ul>
-					<li><a href="products.htm">產品管理</a></li>
-					<li><a href="users.htm">使用者管理</a></li>
-					<li><a href="events.htm">活動管理</a></li>
-					<li><a href="invoices.htm">訂單管理</a></li>
+					<li><a href="products.php">產品管理</a></li>
+					<li><a href="users.php">使用者管理</a></li>
+					<li><a href="events.php">活動管理</a></li>
+					<li><a href="invoices.php">訂單管理</a></li>
 				</ul>
 			</nav>
 		</header>
 		<div class="content">
-			<a href="event-new.htm">新增活動</a>
+			<a href="event-new.php">新增活動</a>
 			<a href="#">刪除</a>
 			<table>
 				<thead>
