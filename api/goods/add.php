@@ -5,9 +5,9 @@ header('Content-type: application/json');
 $name = $_POST['name'];
 $price = $_POST['price'];
 $cat_id = $_POST['cat_id'];
+$invnum = $_POST['invnum'];
 
-
-if(!isset($name) || !isset($price) || !isset($cat_id)){
+if(!isset($name) || !isset($price) || !isset($cat_id) || !isset($invnum)){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
@@ -24,5 +24,4 @@ $data = [
 	result => 0
 ];
 
-header('Content-type: application/json');
 echo json_encode($data);
