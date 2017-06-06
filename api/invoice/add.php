@@ -2,7 +2,7 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$uid = $_POST['uid'];
+$u_id = $_POST['u_id'];
 $shipmethod = $_POST['shipmethod'];
 $shipaddress = $_POST['shipaddress'];
 $p_method = $_POST['p_method'];
@@ -12,11 +12,11 @@ $cp_id = $_POST['cp_id'];
 $p_time = $_POST['p_time']; //時間
 
 if(
-	!isset($uid) ||
+	!isset($u_id) ||
 	!isset($shipmethod) ||
 	!isset($shipaddress) ||
 	!isset($p_method) ||
-	!isset($rname)
+	!isset($r_name)
 ){
 	$data = [
 		result => -98,
@@ -26,7 +26,7 @@ if(
 	exit();
 }
 
-$sql2 = "INSERT INTO invoice (uid, shipmethod, shipaddress, p_method, rn_ame, cp_id) VALUES ('$uid', '$shipmethod', '$shipaddress', '$p_method', '$r_name', '$cp_id')";
+$sql2 = "INSERT INTO invoice (u_id, shipmethod, shipaddress, p_method, r_name, cp_id) VALUES ('$u_id', '$shipmethod', '$shipaddress', '$p_method', '$r_name', '$cp_id')";
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 
