@@ -15,14 +15,14 @@ if(!isset($_SESSION['user'])){
 
 $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
-$cart = [];
+$condition = '';
 while($row = mysqli_fetch_assoc($result)){
-	array_push($cart, $row['g_id']);
+	$condition .= ' id = ' . $row['id'] . ' OR ';
 }
+$condition .= '0';
 
-$ids = join(',', $cart);
 echo $ids;
-$sql2 = "SELECT * FROM goods WHERE id in '$ids'";
+$sql2 = "SELECT * FROM goods WHERE id WHERE '$condition'";
 echo $sql2;
 $result = mysqli_query($link, $sql2);
 $cart = [];
