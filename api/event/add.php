@@ -7,7 +7,7 @@ $des = $_POST['des'];
 $cat_id = $_POST['cat_id'];
 
 
-if(!isset($name) || !isset($des) || !isset($cat_id){
+if(!isset($name) || !isset($des) || !isset($cat_id)){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
