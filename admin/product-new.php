@@ -34,7 +34,7 @@
 			</nav>
 		</header>
 		<div class="content">
-			<form class="form" enctype="multipart/form-data">
+			<form class="form" enctype="multipart/form-data" id="form-add-product">
 				<div class="label">商品名稱</div>
 				<input type="text" name="name">
 				<div class="label">商品圖片</div>
