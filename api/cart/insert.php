@@ -18,7 +18,7 @@ if(!isset($g_id) || !isset($num)){
 
 $sql2 = "INSERT INTO cart('g_id', 'num', 'u_id') VALUES('$g_id', '$num', '$u_id')";
 $result = mysqli_query($link, $sql2);
-$row = mysqli_fetch_assoc($result);
+mysqli_close($link);
 
 $data = [
 	result => 0

@@ -25,7 +25,7 @@ $pic = $t . $name . '.' . $name['extension'];
 
 $sql2 = "INSERT INTO event ('name', 'cat_id', 'pic', 'startdate', 'duedate') VALUES('$name', '$cat_id', '$pic', '$startdate', '$duedate')";
 $result = mysqli_query($link, $sql2);
-$row = mysqli_fetch_assoc($result);
+mysqli_close($link);
 
 $data = [
 	result => 0
