@@ -7,10 +7,9 @@
 	}
 	$data = api('/user/getAll.php');
 	if($data->result != 0){
-		// header('location: /');
-		// exit();
+		header('location: /');
+		exit();
 	}
-	var_dump($data);
 ?>
 
 <!DOCTYPE html>

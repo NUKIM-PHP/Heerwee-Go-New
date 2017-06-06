@@ -5,6 +5,11 @@
 	function api($path){
 		return json_decode(file_get_contents('https://nukim-php.noob.tw/api' . $path));
 	}
+	$data = api('/goods/getAll.php');
+	if($data->result != 0){
+		header('location: /');
+		exit();
+	}
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
@@ -46,42 +51,14 @@
 					</tr>
 				</thead>
 				<tbody>
+					<?php foreach($data->goods as $good): ?>
 					<tr>
 						<td><input type="checkbox"></td>
-						<td>Snoopy87衣</td>
-						<td>87</td>
-						<td class="money">399</td>
+						<td><?= $good->name; ?></td>
+						<td><?= $good->invnum; ?></td>
+						<td class="money"><?= $good->price; ?></td>
 					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>Snoopy87衣</td>
-						<td>87</td>
-						<td class="money">399</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>Snoopy87衣</td>
-						<td>87</td>
-						<td class="money">399</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>Snoopy87衣</td>
-						<td>87</td>
-						<td class="money">399</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>Snoopy87衣</td>
-						<td>87</td>
-						<td class="money">399</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>Snoopy87衣</td>
-						<td>87</td>
-						<td class="money">399</td>
-					</tr>
+					<?php endforeach; ?>
 				</tbody>
 			</table>
 		</div>
