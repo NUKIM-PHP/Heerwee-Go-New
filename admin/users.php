@@ -5,7 +5,13 @@
 	function api($path){
 		return json_decode(file_get_contents('https://nukim-php.noob.tw/api' . $path));
 	}
+	$data = api('/user/getAll.php');
+	if($data->result != 0){
+		header('location: /');
+		exit();
+	}
 ?>
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -46,48 +52,15 @@
 					</tr>
 				</thead>
 				<tbody>
+					<?php foreach($data->users as $user): ?>
 					<tr>
 						<td><input type="checkbox"></td>
-						<td>張宇寬</td>
-						<td>gay style</td>
-						<td>0952549767</td>
-						<td>gay@gay.com</td>
+						<td><?= $user->name; ?></td>
+						<td><?= $user->gender; ?></td>
+						<td><?= $user->tel; ?></td>
+						<td><?= $user->email; ?></td>
 					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>張宇寬</td>
-						<td>gay style</td>
-						<td>0952549767</td>
-						<td>gay@gay.com</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>張宇寬</td>
-						<td>gay style</td>
-						<td>0952549767</td>
-						<td>gay@gay.com</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>張宇寬</td>
-						<td>gay style</td>
-						<td>0952549767</td>
-						<td>gay@gay.com</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>張宇寬</td>
-						<td>gay style</td>
-						<td>0952549767</td>
-						<td>gay@gay.com</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>張宇寬</td>
-						<td>gay style</td>
-						<td>0952549767</td>
-						<td>gay@gay.com</td>
-					</tr>
+					<?php endforeach; ?>
 				</tbody>
 			</table>
 		</div>
