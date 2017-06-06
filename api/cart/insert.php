@@ -16,13 +16,12 @@ if(!isset($g_id) || !isset($num)){
 }
 
 
-$sql2 = "INSERT INTO goods('u_id', 'g_id', 'num') VALUES('$u_id', '$g_id', '$num')";
+$sql2 = "INSERT INTO goods(g_id', 'num', 'u_id') VALUES($g_id', '$num', '$u_id')";
 $result = mysqli_query($link, $sql2);
 $row = mysqli_fetch_assoc($result);
 
 $data = [
 	result => 0
-	cart => $cart
 ];
 
 echo json_encode($data);
