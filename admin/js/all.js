@@ -80,10 +80,8 @@ $(function(){
 			data: formData,
 			cache: false,
 			contentType: false,
-			processData: false,
-			success: function(){
-				location.href('/admin/products.php');
-			}
+			processData: false
 		});
+		location.href('/admin/products.php');
 	});
 });
