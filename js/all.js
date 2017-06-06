@@ -106,7 +106,7 @@ $(function(){
 		})
 	});
 
-	$('#addtocard').on('click', function(){
+	$('#addtocart').on('click', function(){
 		var gid = $(this).data('gid');
 		$.ajax({
 			url: '/api/cart/insert.php',
