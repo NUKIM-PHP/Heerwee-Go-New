@@ -42,13 +42,13 @@
 				<div class="label">價格</div>
 				<input type="text" name="price">
 				<div class="label">分類</div>
-				<select>
-					<option name="cat_id" value="1">WOMEN</option>
-					<option name="cat_id" value="2">MEN</option>
-					<option name="cat_id" value="3">KIDS</option>
-					<option name="cat_id" value="4">BABY</option>
-					<option name="cat_id" value="5">SPORTS</option>
-					<option name="cat_id" value="6">STYLE</option>
+				<select name="cat_id">
+					<option value="1">WOMEN</option>
+					<option value="2">MEN</option>
+					<option value="3">KIDS</option>
+					<option value="4">BABY</option>
+					<option value="5">SPORTS</option>
+					<option value="6">STYLE</option>
 				</select>
 				<div class="label">庫存量</div>
 				<input type="number" name="invnum">
