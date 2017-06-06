@@ -22,7 +22,7 @@ $row = mysqli_fetch_assoc($result);
 
 $data = [
 	result => 0
+	cart => $cart
 ];
 
-header('Content-type: application/json');
 echo json_encode($data);
