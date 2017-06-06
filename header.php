@@ -4,7 +4,7 @@
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 	function api($path){
-		return json_decode(file_get_contents('/api' . $path));
+		return json_decode(file_get_contents('https://nukim-php.noob.tw/api' . $path));
 	}
 ?>
 <!DOCTYPE html>
