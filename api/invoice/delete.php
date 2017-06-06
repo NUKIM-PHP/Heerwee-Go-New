@@ -14,9 +14,9 @@ $id = $_POST['id'];
 		echo json_encode($data);
 	}else{
 		$data = [
-		result => -98,
-		message => 'Invalid data.'
-	];
+			result => -98,
+			message => 'Invalid data.'
+		];
 		echo json_encode($data);
 		exit();
 	}
