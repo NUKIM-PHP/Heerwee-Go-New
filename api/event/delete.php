@@ -2,9 +2,9 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$id = $_GET['id'];
+$id = $_POST['id'];
 
-	if(isset($_GET['id']) && $_GET['check']=='yes'){
+	if(isset($id)){
 		$sql2 = "DELETE FROM event WHERE id = '$id'";
 		mysqli_query($link, $sql2);
 		mysqli_close($link);
