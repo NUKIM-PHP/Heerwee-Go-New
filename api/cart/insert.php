@@ -6,6 +6,15 @@ $u_id = $_SESSION['user'];
 $g_id = $_POST['g_id'];
 $num = $_POST['num'];
 
+if(!isset($_SESSION['user'])){
+	$data = [
+		result => -99,
+		message => 'You need to login.'
+	];
+	echo json_encode($data);
+	exit();
+}
+
 if(
 	!isset($g_id) || 
 	!isset($num)
