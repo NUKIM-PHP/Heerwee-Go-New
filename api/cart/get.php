@@ -21,9 +21,7 @@ while($row = mysqli_fetch_assoc($result)){
 }
 $condition .= '0';
 
-echo $ids;
 $sql2 = "SELECT * FROM goods WHERE $condition";
-echo $sql2;
 $result = mysqli_query($link, $sql2);
 $cart = [];
 while($row = mysqli_fetch_assoc($result)){
