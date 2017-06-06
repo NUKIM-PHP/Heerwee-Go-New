@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	function api($path){
 		return json_decode(file_get_contents('/api' . $path));
 	}
@@ -25,7 +26,7 @@
 					<?php if(isset($_SESSION['user'])){ ?>
 					嗨，<?= $_SESSION['name'] ?>！
 					<a href="#" id="link-logout">登出</a>
-					<?php } else { ?>}
+					<?php } else { ?>
 					<a href="#" id="link-login">登入</a>
 					<a href="/register.php" id="link-register">註冊</a>
 					<?php } ?>
