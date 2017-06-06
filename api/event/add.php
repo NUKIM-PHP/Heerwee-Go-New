@@ -8,7 +8,6 @@ $startdate = $_POST['startdate'];
 $duedate = $_POST['duedate'];
 $pic = $_FILES['upload'];
 
-
 if(
 	!isset($name) || 
 	!isset($cat_id) || 
