@@ -2,12 +2,10 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$id = $_GET['id'];
-
-if(!isset($id)){
+if(!isset($_SESSION['admin'])){
 	$data = [
-		result => -98,
-		message => 'Invalid data.'
+		result => -99,
+		message => 'You are not an admin.'
 	];
 	echo json_encode($data);
 	exit();
