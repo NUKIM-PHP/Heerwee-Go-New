@@ -20,9 +20,33 @@ $(function(){
 		$('.login-box').hide(0).slideDown();
 	});
 
+	$('.login-box').on('click', function(e){
+		e.stopPropagation();
+	})
+
 	$('.login-wrapper').on('click', function(){
 		$(this).fadeOut();
 	});
+
+	$('#button-login').on('click', function(){
+		$('#loginFailed').hide();
+		$.ajax({
+			url: 'http://nukim-php.noob.tw/api/user/login.php',
+			method: 'POST',
+			dataType: 'json',
+			data: {
+				user: $('#login-user').val(),
+				pass: $('#login-pass').val()
+			},
+			success: function(data){
+				if(data.result === 0){
+					location.reload();
+				}else{
+					$('#loginFailed').show();
+				}
+			}
+		});
+	})
 
 	$('#register-form input[name="confirm_pass"]').on('change', function(){
 		if($(this).val() !== $('#register-form input[name="pass"]').val()){

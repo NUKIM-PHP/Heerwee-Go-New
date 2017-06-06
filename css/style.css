@@ -93,6 +93,7 @@ nav li{
 	margin: 0 auto;
 	max-width: 1020px;
 	max-height: 500px;
+	width: 100%;
 	background: #ccc;
 	margin: 0 auto;
 }
@@ -140,6 +141,12 @@ nav li{
 .product-name, .product-price{
 	font-size: .9rem;
 	color: #333;
+}
+
+.product-name{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .login-wrapper{
@@ -206,7 +213,7 @@ nav li{
 	transform: scale(2, 2);
 }
 
-#wrong-confirm-pass{
+#wrong-confirm-pass, #loginFailed{
 	color: red;
 	display: inline;
 	font-weight: bold;
