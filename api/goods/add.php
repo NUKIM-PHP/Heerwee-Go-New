@@ -31,7 +31,6 @@ move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.jpg');
 $pic = $t . $name . '.jpg';
 
 $sql2 = "INSERT INTO goods(name, price, cat_id, invnum, `desc`) VALUES ('$goodname', '$price', '$cat_id', '$invnum', '$desc') ";
-echo $sql2;
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 
