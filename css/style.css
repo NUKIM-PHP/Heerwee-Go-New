@@ -47,7 +47,8 @@ header{
 	display: inline-block;
 }
 
-input[type="text"], input[type="password"], input[type="tel"], input[type="email"]{
+input[type="text"], input[type="password"],
+input[type="tel"], input[type="email"], input[type="number"]{
 	padding: 5px 15px;
 	border: 2px #D2B48C solid;
 	border-radius: 5px;
@@ -71,6 +72,10 @@ input[type="text"], input[type="password"], input[type="tel"], input[type="email
 	margin: 0 .5rem;
 	font-size: 1.1rem;
 	border-bottom: 2px solid #121212;
+}
+
+.user a:hover{
+	text-decoration: none;
 }
 
 nav ul{
@@ -167,6 +172,127 @@ nav li{
 
 .login-box .button{
 	margin: .5rem auto;
+}
+
+.form{
+	max-width: 400px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: left;
+	background: #fffff0;
+	padding: 2rem;
+}
+
+.form .label{
+	margin: 0 auto;
+	text-align: left;
+	color: #444;
+
+}
+
+.form input{
+	width: calc(100% - 2rem);
+	margin-bottom: 1rem;
+}
+
+.form input[type="radio"]{
+	display: inline;
+	width: auto;
+	margin-top: 1.5rem;
+	margin-right: .5rem;
+	margin-left: 1.5rem;
+	transform: scale3d(2, 2, 1);
+	transform: scale(2, 2);
+}
+
+#wrong-confirm-pass{
+	color: red;
+	display: inline;
+	font-weight: bold;
+	display: none;
+}
+
+.product-cart{
+	vertical-align: top;
+	margin-bottom: 1rem;
+}
+
+.product-cart-pic{
+	display: inline-block;
+	vertical-align: top;
+	max-width: 64px;
+	width: 100%;
+}
+
+.product-cart-name{
+	display: inline-block;
+	font-size: 1.3rem;
+	line-height: 3rem;
+	width: 50%;
+}
+
+.product-cart-length{
+	display: inline-block;
+	line-height: 3rem;
+	width: 100px;
+}
+
+.product-cart-price{
+	display: inline-block;
+	line-height: 3rem;
+	width: 100px;
+}
+
+.amount-wrapper{
+	padding: .5rem;
+	border-top: 2px solid #121212;
+	text-align: right;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+.cart-buttons{
+	text-align: right;
+}
+
+#product .product-img{
+	display: inline-block;
+	max-width: 220px;
+}
+
+#product .product-meta{
+	display: inline-block;
+	text-align: left;
+	padding: 1rem;
+	max-width: calc(90% - 220px - 2rem);
+	vertical-align: top;
+	line-height: 1.5rem;
+}
+
+#product .product-desc{
+	color: #333;
+}
+
+#product .product-name{
+	font-size: 2rem;
+}
+
+#product .product-price{
+	color: #D32F2F;
+	font-size: 1.5rem;
+	line-height: 5rem;
+	font-weight: 800;
+}
+
+#product #product-length{
+	width: 3.6rem;
+	margin-left: .5rem;
+	margin-right: 1rem;
+	font-size: 1.2rem;
+}
+
+#product #addtocart{
+	text-align: right;
 }
 
 footer{

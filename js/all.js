@@ -22,6 +22,26 @@ $(function(){
 
 	$('.login-wrapper').on('click', function(){
 		$(this).fadeOut();
-	})
+	});
 
+	$('#register-form input[name="confirm_pass"]').on('change', function(){
+		if($(this).val() !== $('#register-form input[name="pass"]').val()){
+			$('#wrong-confirm-pass').show();
+		}else{
+			$('#wrong-confirm-pass').hide();
+		}
+	});
+
+	$('.money').each(function(){
+		var num = $(this).text();
+		var regexnum = /(-?\d+)(\d{3})/;
+		while(regexnum.test(num)){
+			num = num.replace(regexnum, '$1,$2');
+		}
+		if($(this).text().startsWith('$')){
+			$(this).text(num);
+		}else{
+			$(this).text('$' + num);
+		}
+	})
 });
