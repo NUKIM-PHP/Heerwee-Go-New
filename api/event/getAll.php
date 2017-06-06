@@ -2,7 +2,16 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$sql2 = "SELECT * FROM event LIMIT 4";
+if(!isset($_SESSION['admin'])){
+	$data = [
+		result => -99,
+		message => 'You are not an admin.'
+	];
+	echo json_encode($data);
+	exit();
+}
+
+$sql2 = "SELECT * FROM event";
 $result = mysqli_query($link, $sql2);
 $events = [];
 while($row = mysqli_fetch_assoc($result)){
