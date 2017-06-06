@@ -106,5 +106,20 @@ $(function(){
 		})
 	});
 
+	$('#addtocard').on('click', function(){
+		var gid = $(this).data('gid');
+		$.ajax({
+			url: '/api/cart/insert.php',
+			method: 'POST',
+			dataType: 'json',
+			data: {
+				g_id: gid,
+				num: $('#product-length').val() || 1
+			},
+			success: function(){
+				location.href = '/cart.php';
+			}
+		})
+	});
 
 });
