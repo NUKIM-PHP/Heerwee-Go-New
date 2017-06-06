@@ -7,13 +7,15 @@ $price = $_POST['price'];
 $cat_id = $_POST['cat_id'];
 $invnum = $_POST['invnum'];
 $desc = $_POST['desc'];
+$pic = $_FILES['upload'];
 
 if(
-	!isset($name) || 
-	!isset($price) || 
-	!isset($cat_id) || 
+	!isset($name) ||
+	!isset($price) ||
+	!isset($cat_id) ||
 	!isset($invnum) ||
-	!isset($desc)
+	!isset($desc) ||
+	!isset($pic)
 ){
 	$data = [
 		result => -98,
@@ -22,6 +24,11 @@ if(
 	echo json_encode($data);
 	exit();
 }
+
+$name = pathinfo($pic['name']);
+$t = time();
+move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.jpg');
+$pic = $t . $name . '.jpg';
 
 $sql2 = "INSERT INTO goods(name, price, cat_id, invnum, 'desc') VALUES ('$name', '$price', '$cat_id', '$invnum', '$desc') ";
 $result = mysqli_query($link, $sql2);

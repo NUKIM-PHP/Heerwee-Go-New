@@ -24,7 +24,7 @@
 					<div>金額：<span id="amount" class="money"><?= $total ?></span>元</div>
 				</div>
 				<div class="cart-buttons">
-					<div class="button">繼續購物</div>
+					<div class="button" id="button-back">繼續購物</div>
 					<div class="button">前往結帳</div>
 				</div>
 			</div>

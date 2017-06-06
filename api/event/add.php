@@ -8,12 +8,11 @@ $startdate = $_POST['startdate'];
 $duedate = $_POST['duedate'];
 $pic = $_FILES['upload'];
 
-
 if(
-	!isset($name) || 
-	!isset($cat_id) || 
-	!isset($startdate) || 
-	!isset($duedate) || 
+	!isset($name) ||
+	!isset($cat_id) ||
+	!isset($startdate) ||
+	!isset($duedate) ||
 	!isset($pic)
 ){
 	$data = [

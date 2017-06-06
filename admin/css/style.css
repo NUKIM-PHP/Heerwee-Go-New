@@ -1,0 +1,121 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+.wrapper{
+	text-align: center;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	background: #F5DEB3;
+}
+
+img{
+	max-width: 100%;
+}
+
+a, a:visited, a:hover, a:visited:hover{
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover, a:visited:hover{
+	text-decoration: underline;
+}
+
+input[type="text"], input[type="password"], select,
+input[type="tel"], input[type="email"], input[type="number"]{
+	padding: 5px 15px;
+	border: 2px #D2B48C solid;
+	border-radius: 5px;
+	margin: 2px;
+	background: #fff;
+}
+
+.form{
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form input, .form select{
+	width: 100%;
+	margin-bottom: 1.2rem;
+}
+
+.form select{
+	width: 100%;
+}
+
+.form .label{
+	margin: 0 auto;
+	text-align: left;
+	color: #444;
+}
+
+.button{
+	color: #444444;
+	padding:5px 15px;
+	background: #D2B48C;
+	border: 0;
+	cursor: pointer;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+#hi{
+	float: right;
+}
+
+header nav ul{
+	padding: 0;
+	text-align: center;
+}
+
+header nav li{
+	display: inline-block;
+	list-style: none;
+	padding: 1rem;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+.content{
+	padding-bottom: 1rem;
+}
+
+table{
+	border-collapse: collapse;
+	width: calc(100% - 1rem);
+	margin: 1rem .5rem;
+}
+
+thead tr{
+	font-weight: bold;
+	background: #FDD835;
+}
+
+tbody tr:nth-child(odd){
+	background: rgba(80, 80, 80, 0.2);
+}
+
+td{
+	border: 1px solid #121212;
+	padding: .5rem;
+}
+
+input[type="checkbox"]{
+	transform: scale3d(2, 2, 1);
+	transform: scale(2, 2);
+}
+
+.clear{
+	clear: both;
+}

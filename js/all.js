@@ -124,4 +124,7 @@ $(function(){
 		});
 	});
 
+	$('#button-back').on('click', function(){
+		location.href = '/';
+	});
 });
