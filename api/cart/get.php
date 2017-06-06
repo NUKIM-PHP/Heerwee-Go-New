@@ -4,15 +4,6 @@ header('Content-type: application/json');
 
 $u_id = $_SESSION['user'];
 
-if(!isset($_SESSION['user'])){
-	$data = [
-		result => -99,
-		message => 'Need to login.'
-	];
-	echo json_encode($data);
-	exit();
-}
-
 $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
 $condition = '';
