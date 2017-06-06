@@ -6,7 +6,7 @@ $uid = $_POST['uid'];
 $shipmethod = $_POST['shipmethod'];
 $shipaddress = $_POST['shipaddress'];
 $p_method = $_POST['p_method'];
-$rname = $_POST['rname'];
+$r_name = $_POST['r_name'];
 $cp_id = $_POST['cp_id'];
 
 $p_time = $_POST['p_time']; //時間
@@ -26,7 +26,7 @@ if(
 	exit();
 }
 
-$sql2 = "INSERT INTO invoice (uid, shipmethod, shipaddress, p_method, rname, cp_id) VALUES ('$uid', '$shipmethod', '$shipaddress', '$p_method', '$rname', '$cp_id')";
+$sql2 = "INSERT INTO invoice (uid, shipmethod, shipaddress, p_method, rn_ame, cp_id) VALUES ('$uid', '$shipmethod', '$shipaddress', '$p_method', '$r_name', '$cp_id')";
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 
