@@ -13,7 +13,7 @@ if(!isset($id)){
 	exit();
 }
 
-$sql2 = "SELECT * FROM `goods` WHERE cat_id IN (select id from category where parent = 1)";
+$sql2 = "SELECT * FROM `goods` WHERE cat_id IN (select id from category where parent = '$id')";
 $result = mysqli_query($link, $sql2);
 $goods = [];
 while($row = mysqli_fetch_assoc($result)){
