@@ -6,7 +6,15 @@ $u_id = $_SESSION['user'];
 $g_id = $_POST['g_id'];
 $num = $_POST['num'];
 
-u_id VALUES '$u_id';
+if(!isset($g_id) || !isset($num)){
+	$data = [
+		result => -98,
+		message => 'Invalid data.'
+	];
+	echo json_encode($data);
+	exit();
+}
+
 
 $sql2 = "INSERT INTO goods('u_id', 'g_id', 'num') VALUES('$u_id', '$g_id', '$num')";
 $result = mysqli_query($link, $sql2);
