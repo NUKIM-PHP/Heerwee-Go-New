@@ -6,7 +6,10 @@ $u_id = $_SESSION['user'];
 $g_id = $_POST['g_id'];
 $num = $_POST['num'];
 
-if(!isset($g_id) || !isset($num)){
+if(
+	!isset($g_id) || 
+	!isset($num)
+){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
@@ -16,7 +19,7 @@ if(!isset($g_id) || !isset($num)){
 }
 
 
-$sql2 = "INSERT INTO cart(g_id, num, u_id) VALUES('$g_id', '$num', '$u_id')";
+$sql2 = "INSERT INTO cart (g_id, num, u_id) VALUES('$g_id', '$num', '$u_id')";
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 
