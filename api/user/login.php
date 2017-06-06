@@ -15,7 +15,7 @@ if(isset($row)){
 		result => 0
 	];
 	$_SESSION['user'] = $row['id'];
-	if($row['admin'] == '1') $_SESSION['isAdmin'] = 1;
+	if($row['isAdmin'] == '1') $_SESSION['admin'] = 1;
 }else{
 	$data = [
 		result => -1,
