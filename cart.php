@@ -7,6 +7,21 @@
 ?>
 		<div class="content">
 			<div class="cart-wrapper">
+
+
+				<?php foreach ($data->cart as $good): ?>
+				<div class="product-cart">
+					<img src="/img/<?= $good->pic ?>.jpg" alt="" class="product-cart-pic">
+					<div class="product-cart-name"><?= $good->name ?></div>
+					<div class="product-cart-length"><?= $good->num ?></div>
+					<div class="product-cart-price money"><?= ($good->price * $good->num) ?></div>
+				</div>
+				<?php endforeach;?>
+
+
+
+
+
 				<div class="product-cart">
 					<img src="https://fakeimg.pl/150x150" alt="" class="product-cart-pic">
 					<div class="product-cart-name">SNOOPY 卡通童裝</div>
