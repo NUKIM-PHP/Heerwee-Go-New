@@ -16,7 +16,7 @@
 					<div class="product-cart-name"><?= $good->name ?></div>
 					<div class="product-cart-length"><?= $good->num ?></div>
 					<div class="product-cart-price money"><?= $good->price * $good->num ?></div>
-
+					<?php $total += $good->price * $good->num; ?>
 				</div>
 				<?php endforeach;?>
 				<div class="amount-wrapper">
