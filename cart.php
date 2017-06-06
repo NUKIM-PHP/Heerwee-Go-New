@@ -21,7 +21,7 @@
 				<?php endforeach;?>
 				<div class="amount-wrapper">
 					<div>折抵：<span id="discount" class="money">0</span>元</div>
-					<div>金額：<span id="amount" class="money">4252</span>元</div>
+					<div>金額：<span id="amount" class="money"><?= $total ?></span>元</div>
 				</div>
 				<div class="cart-buttons">
 					<div class="button">繼續購物</div>
