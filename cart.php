@@ -8,7 +8,7 @@
 ?>
 		<div class="content">
 			<div class="cart-wrapper">
-				<?php foreach ($data['cart'] as $good): ?>
+				<?php foreach ($data->carts as $good): ?>
 				<div class="product-cart">
 					<img src="/img/<?= $good->pic ?>.jpg" alt="" class="product-cart-pic">
 					<div class="product-cart-name"><?= $good->name ?></div>

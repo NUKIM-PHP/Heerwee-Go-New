@@ -36,7 +36,7 @@ while($row = mysqli_fetch_assoc($result)){
 if(count($cart)){
 	$data = [
 		result => 0,
-		cart => $cart
+		carts => $cart
 	];
 }else{
 	$data = [
