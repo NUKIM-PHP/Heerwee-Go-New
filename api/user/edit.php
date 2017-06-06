@@ -2,6 +2,15 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
+if(!isset($_SESSION['user'])){
+	$data = [
+		result => -99,
+		message => 'Need to login.'
+	];
+	echo json_encode($data);
+	exit();
+}
+
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 $name = $_POST['name'];
