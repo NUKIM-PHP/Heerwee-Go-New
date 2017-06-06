@@ -16,7 +16,7 @@ $(function(){
 		var num = $('input[type=checkbox]:checked');
 		$('input[type=checkbox]:checked').each(function(){
 			$.ajax({
-				url: '/api/user/del.php',
+				url: '/api/user/delete.php',
 				method: 'POST',
 				dataType: 'json',
 				data: {
