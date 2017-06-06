@@ -12,8 +12,9 @@ if(!isset($_SESSION['user'])){
 }
 
 $id= $_GET['id'];
+$u_id = $_SESSION['user'];
 
-$sql2 = "SELECT * FROM invoice, detail WHERE id='$id'";
+$sql2 = "SELECT * FROM invoice, detail WHERE id = '$id' AND u_id = '$u_id'";
 $result = mysqli_query($link, $sql2);
 $row = mysqli_fetch_assoc($result);
 

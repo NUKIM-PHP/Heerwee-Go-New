@@ -11,7 +11,7 @@ if(!isset($_SESSION['user'])){
 	exit();
 }
 
-$u_id= $_GET['u_id'];
+$u_id= $_SESSION['user'];
 
 $sql2 = "SELECT * FROM invoice WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
