@@ -3,11 +3,13 @@ require('../../connection.php');
 header('Content-type: application/json');
 
 $name = $_POST['name'];
-$des = $_POST['des'];
 $cat_id = $_POST['cat_id'];
+$startdate = $_POST['startdate'];
+$duedate = $_POST['duedate'];
+$pic = $_FILES['upload'];
 
 
-if(!isset($name) || !isset($des) || !isset($cat_id)){
+if(!isset($name) || !isset($des) || !isset($cat_id) || !isset($pic)){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
@@ -16,7 +18,12 @@ if(!isset($name) || !isset($des) || !isset($cat_id)){
 	exit();
 }
 
-$sql2 = "INSERT INTO goods('name', 'des', 'cat_id') VALUES('$name', '$des', '$cat_id') ";
+$name = pathinfo($pic['name']);
+$t = time();
+move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.' . $name['extension']);
+$pic = $t . $name . '.' . $name['extension'];
+
+$sql2 = "INSERT INTO goods('name', 'cat_id', 'pic', 'startdate', 'duedate') VALUES('$name', '$cat_id', '$pic', '$startdate', '$duedate')";
 $result = mysqli_query($link, $sql2);
 $row = mysqli_fetch_assoc($result);
 

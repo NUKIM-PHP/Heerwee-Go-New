@@ -8,6 +8,7 @@ $shipaddress = $_POST['shipaddress'];
 $p_method = $_POST['p_method'];
 $r_name = $_POST['r_name'];
 $cp_id = $_POST['cp_id'];
+$pic = $_FILES['upload'];
 
 $p_time = $_POST['p_time']; //時間
 
