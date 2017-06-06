@@ -54,7 +54,7 @@
 				<tbody>
 					<?php foreach($data->users as $user): ?>
 					<tr>
-						<td><input type="checkbox"></td>
+						<td><input type="checkbox" data-id="<?= $user->id;?>"></td>
 						<td><?= $user->name; ?></td>
 						<td><?= $user->gender; ?></td>
 						<td><?= $user->tel; ?></td>

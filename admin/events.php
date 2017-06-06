@@ -55,7 +55,7 @@
 				<tbody>
 					<?php foreach($data->events as $event): ?>
 					<tr>
-						<td><input type="checkbox"></td>
+						<td><input type="checkbox" data-id="<?= $event->id;?>"></td>
 						<td><?= $event->name ;?></td>
 						<td><?= $event->pic ;?></td>
 						<td><?= $event->cat_id ;?></td>

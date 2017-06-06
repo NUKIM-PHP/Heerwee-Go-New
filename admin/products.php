@@ -53,7 +53,7 @@
 				<tbody>
 					<?php foreach($data->goods as $good): ?>
 					<tr>
-						<td><input type="checkbox"></td>
+						<td><input type="checkbox" data-id="<?= $good->id;?>"></td>
 						<td><?= $good->name; ?></td>
 						<td><?= $good->invnum; ?></td>
 						<td class="money"><?= $good->price; ?></td>
