@@ -2,7 +2,16 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$s = $_POST['s'];
+$s = $_GET['s'];
+
+if(!isset($s)){
+	$data = [
+		result => -98,
+		message => 'Invalid data.'
+	];
+	echo json_encode($data);
+	exit();
+}
 
 $sql2 = "SELECT * FROM goods WHERE name LIKE '%$s%'";;
 $result = mysqli_query($link, $sql2);
