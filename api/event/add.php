@@ -9,7 +9,13 @@ $duedate = $_POST['duedate'];
 $pic = $_FILES['upload'];
 
 
-if(!isset($name) || !isset($des) || !isset($cat_id) || !isset($pic)){
+if(
+	!isset($name) || 
+	!isset($cat_id) || 
+	!isset($startdate) || 
+	!isset($duedate) || 
+	!isset($pic)
+){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
@@ -23,9 +29,9 @@ $t = time();
 move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.' . $name['extension']);
 $pic = $t . $name . '.' . $name['extension'];
 
-$sql2 = "INSERT INTO goods('name', 'cat_id', 'pic', 'startdate', 'duedate') VALUES('$name', '$cat_id', '$pic', '$startdate', '$duedate')";
+$sql2 = "INSERT INTO event ('name', 'cat_id', 'pic', 'startdate', 'duedate') VALUES('$name', '$cat_id', '$pic', '$startdate', '$duedate')";
 $result = mysqli_query($link, $sql2);
-$row = mysqli_fetch_assoc($result);
+mysqli_close($link);
 
 $data = [
 	result => 0

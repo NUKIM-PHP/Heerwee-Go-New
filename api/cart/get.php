@@ -2,6 +2,8 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
+$u_id = $_SESSION['user'];
+
 if(!isset($_SESSION['user'])){
 	$data = [
 		result => -99,
@@ -10,8 +12,6 @@ if(!isset($_SESSION['user'])){
 	echo json_encode($data);
 	exit();
 }
-
-$u_id = $_SESSION['user'];
 
 $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
