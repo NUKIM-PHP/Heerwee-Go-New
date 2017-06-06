@@ -7,7 +7,6 @@ $pass = $_POST['pass'];
 $name = $_POST['name'];
 $tel = $_POST['tel'];
 $email = $_POST['email'];
-$address = $_POST['address'];
 $gender = $_POST['gender'];
 
 if(
@@ -16,7 +15,6 @@ if(
 	!isset($name) ||
 	!isset($tel) ||
 	!isset($email) ||
-	!isset($address) ||
 	!isset($gender)
 ){
 	$data = [
@@ -27,7 +25,7 @@ if(
 	exit();
 }
 
-$sql2 = "INSERT INTO user (user, pass, name, tel, email, address, gender) VALUES ('$user', '$pass', '$name', '$tel', '$email', '$address', '$gender')";
+$sql2 = "INSERT INTO user (user, pass, name, tel, email, gender) VALUES ('$user', '$pass', '$name', '$tel', '$email', '$gender')";
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 

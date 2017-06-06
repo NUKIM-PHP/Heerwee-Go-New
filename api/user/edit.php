@@ -16,7 +16,6 @@ $pass = $_POST['pass'];
 $name = $_POST['name'];
 $tel = $_POST['tel'];
 $email = $_POST['email'];
-$address = $_POST['address'];
 $gender = $_POST['gender'];
 
 if(
@@ -25,7 +24,6 @@ if(
 	!isset($name) ||
 	!isset($tel) ||
 	!isset($email) ||
-	!isset($address) ||
 	!isset($gender)
 ){
 	$data = [
@@ -36,7 +34,7 @@ if(
 	exit();
 }
 
-$sql2 = "UPDATE user SET user = '$user', pass = '$pass', name = '$name', tel = '$tel', email = '$email', address = '$address', gender = '$gender'";
+$sql2 = "UPDATE user SET user = '$user', pass = '$pass', name = '$name', tel = '$tel', email = '$email', gender = '$gender'";
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 
