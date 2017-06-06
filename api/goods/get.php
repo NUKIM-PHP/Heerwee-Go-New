@@ -2,7 +2,7 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$id= $_GET['id'];
+$id=  $_GET['id'];
 
 $sql2 = "SELECT * FROM goods WHERE id='$id'";
 $result = mysqli_query($link, $sql2);
@@ -17,8 +17,6 @@ if(isset($row)){
 	$data = [
 		result => -1,
 		message => 'Goods not found'
-	]
+	];
 }
-
-
 echo json_encode($data);
