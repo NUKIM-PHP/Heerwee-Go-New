@@ -7,7 +7,7 @@ $price = $_POST['price'];
 $cat_id = $_POST['cat_id'];
 
 
-if(!isset($name) || !isset($price) || !isset($cat_id){
+if(!isset($name) || !isset($price) || !isset($cat_id)){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
