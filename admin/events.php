@@ -57,7 +57,7 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td><?= $event->name ;?></td>
-						<td><?= $event->pic ;?>.jpg</td>
+						<td><?= $event->pic ;?></td>
 						<td><?= $event->cat_id ;?></td>
 						<td><?= $event->startdate ;?></td>
 						<td><?= $event->duedate ;?></td>
