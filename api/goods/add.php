@@ -23,7 +23,7 @@ if(
 
 $sql2 = "INSERT INTO goods(name, price, cat_id, invnum) VALUES ('$name', '$price', '$cat_id', '$invnum') ";
 $result = mysqli_query($link, $sql2);
-$row = mysqli_fetch_assoc($result);
+mysqli_close($link);
 
 $data = [
 	result => 0
