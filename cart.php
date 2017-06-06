@@ -1,6 +1,7 @@
 <?php require_once('header.php'); ?>
 <?php
-	$data = api('/cart/get.php');
+	$u_id = $_SESSION['user'];
+	$data = api("/cart/get.php?u_id=$u_id");
 	if($data->result != 0){
 		//header('location: /');
 		//exit();

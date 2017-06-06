@@ -2,7 +2,7 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$u_id = $_SESSION['user'];
+$u_id = $_SESSION['user'] || $_GET['u_id'];
 
 if(!isset($u_id)){
 	$data = [
