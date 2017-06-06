@@ -1,6 +1,6 @@
 <?php
 	function api($path){
-		return json_decode(file_get_contents('http://nukim-php.noob.tw/api' . $path));
+		return json_decode(file_get_contents('/api' . $path));
 	}
 ?>
 <!DOCTYPE html>

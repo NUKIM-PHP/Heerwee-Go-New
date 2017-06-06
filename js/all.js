@@ -31,7 +31,7 @@ $(function(){
 	$('#button-login').on('click', function(){
 		$('#loginFailed').hide();
 		$.ajax({
-			url: 'http://nukim-php.noob.tw/api/user/login.php',
+			url: '/api/user/login.php',
 			method: 'POST',
 			dataType: 'json',
 			data: {
