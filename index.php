@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-Hant-TW">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
-	<link rel="stylesheet" href="https://unpkg.com/animate.css">
-	<link rel="stylesheet" href="https://unpkg.com/font-awesome.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
-	<link rel="stylesheet" href="css/style.css">
-	<title>HeerWee Go</title>
-</head>
-<body>
-	<div class="wrapper">
-		<header>
-			<h1><img src="img/logo.png" alt="" id="logo"></h1>
-			<div class="user-wrapper">
-				<div class="user">
-					<a href="#" id="link-login">登入</a>
-					<a href="#" id="link-register">註冊</a>
-				</div>
-				<div class="search">
-					<input type="text" id="search">
-					<div class="button">搜尋</div>
-				</div>
-				<div class="clear"></div>
-				<nav>
-					<ul>
-						<li><a href="#">WOMEN</a></li>
-						<li><a href="#">MEN</a></li>
-						<li><a href="#">KIDS</a></li>
-						<li><a href="#">BABY</a></li>
-						<li><a href="#">SPORTS</a></li>
-						<li><a href="#">STYLE</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="clear"></div>
-		</header>
+<?php require_once('header.php'); ?>
 		<div class="content">
 			<div class="slider">
 				<img id="events" src="img/event_1.png"></div>
@@ -83,11 +44,4 @@
 				<div class="button">登入</div>
 			</div>
 		</div>
-		<footer>
-			關於公司 | 人才招募 | 聯絡我們 ｜其他資訊
-		</footer>
-	</div>
-	<script src="https://unpkg.com/jquery"></script>
-	<script src="js/all.js"></script>
-</body>
-</html>
+<?php require_once('footer.php'); ?>

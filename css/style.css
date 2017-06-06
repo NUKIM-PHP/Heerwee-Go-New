@@ -115,6 +115,7 @@ nav li{
 
 .product{
 	box-shadow: 2px 4px 12px 2px #ccc;
+	cursor: pointer;
 }
 
 .product-catalog{

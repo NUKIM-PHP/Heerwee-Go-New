@@ -43,5 +43,11 @@ $(function(){
 		}else{
 			$(this).text('$' + num);
 		}
+	});
+
+	$('.product').on('click', function(){
+		if($(this).data('gid')){
+			location.href = '/product.php?id=' + $(this).data('gid');
+		}
 	})
 });
