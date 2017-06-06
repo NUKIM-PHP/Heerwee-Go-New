@@ -9,7 +9,13 @@ $duedate = $_POST['duedate'];
 $pic = $_FILES['upload'];
 
 
-if(!isset($name) || !isset($des) || !isset($cat_id) || !isset($pic)){
+if(
+	!isset($name) || 
+	!isset($cat_id) || 
+	!isset($startdate) || 
+	!isset($duedate) || 
+	!isset($pic)
+){
 	$data = [
 		result => -98,
 		message => 'Invalid data.'
