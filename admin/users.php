@@ -40,7 +40,7 @@
 			</nav>
 		</header>
 		<div class="content">
-			<a href="#">刪除</a>
+			<a href="#" id="delete-user">刪除</a>
 			<table>
 				<thead>
 					<tr>

@@ -40,7 +40,7 @@
 		</header>
 		<div class="content">
 			<a href="event-new.php">新增活動</a>
-			<a href="#">刪除</a>
+			<a href="#" id="delete-event">刪除</a>
 			<table>
 				<thead>
 					<tr>

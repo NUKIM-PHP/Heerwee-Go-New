@@ -40,7 +40,7 @@
 		</header>
 		<div class="content">
 			<a href="product-new.php">新增商品</a>
-			<a href="#">刪除</a>
+			<a href="#" id="delete-product">刪除</a>
 			<table>
 				<thead>
 					<tr>
