@@ -16,15 +16,19 @@ if(!isset($_SESSION['user'])){
 $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
 $condition = '';
+$num = [];
 while($row = mysqli_fetch_assoc($result)){
 	$condition .= ' id = ' . $row['g_id'] . ' OR ';
+	array_push($num, $row['num']);
 }
 $condition .= '0';
 
 $sql2 = "SELECT * FROM goods WHERE $condition";
 $result = mysqli_query($link, $sql2);
 $cart = [];
+$i = 0 ;
 while($row = mysqli_fetch_assoc($result)){
+	$row->num = $num[$i++];
 	array_push($cart, $row);
 }
 
