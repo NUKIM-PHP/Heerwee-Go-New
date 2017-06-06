@@ -41,6 +41,7 @@ error_reporting(E_ALL);
 					<input type="text" id="search" name="s">
 					<input type="submit" class="button" value="搜尋">
 					</form>
+					<a href="/cart.php"><i class="fa fa-shopping-cart"></i></a>
 				</div>
 				<div class="clear"></div>
 				<nav>
