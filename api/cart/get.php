@@ -17,7 +17,7 @@ $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
 $condition = '';
 while($row = mysqli_fetch_assoc($result)){
-	$condition .= ' id = ' . $row['id'] . ' OR ';
+	$condition .= ' id = ' . $row['g_id'] . ' OR ';
 }
 $condition .= '0';
 
