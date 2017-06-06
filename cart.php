@@ -1,4 +1,10 @@
 <?php require_once('header.php'); ?>
+<?php $data = api('/cart/get.php');
+	if($data->result != 0){
+		header('location: /');
+		exit();
+	}
+?>
 		<div class="content">
 			<div class="cart-wrapper">
 				<div class="product-cart">

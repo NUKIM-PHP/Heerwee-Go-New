@@ -17,9 +17,17 @@ $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
 $cart = [];
 while($row = mysqli_fetch_assoc($result)){
+	array_push($cart, $row['g_id']);
+}
+
+$ids = join(',', $cart);
+$sql2 = "SELECT * FROM goods WHERE id in '$ids'";
+$result = mysqli_query($link, $sql2);
+$cart = [];
+while($row = mysqli_fetch_assoc($result)){
 	array_push($cart, $row);
 }
-mysqli_close($link);
+
 
 if(count($cart)){
 	$data = [
