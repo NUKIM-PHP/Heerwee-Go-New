@@ -28,7 +28,7 @@ $result = mysqli_query($link, $sql2);
 $cart = [];
 $i = 0 ;
 while($row = mysqli_fetch_assoc($result)){
-	$row['num'] = $num->$i++;
+	$row['num'] = $num[$i++];
 	array_push($cart, $row);
 }
 
