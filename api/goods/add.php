@@ -6,14 +6,14 @@ $name = $_POST['name'];
 $price = $_POST['price'];
 $cat_id = $_POST['cat_id'];
 $invnum = $_POST['invnum'];
-$des = $_POST['des'];
+$desc = $_POST['desc'];
 
 if(
 	!isset($name) || 
 	!isset($price) || 
 	!isset($cat_id) || 
 	!isset($invnum) ||
-	!isset($des)
+	!isset($desc)
 ){
 	$data = [
 		result => -98,
@@ -23,7 +23,7 @@ if(
 	exit();
 }
 
-$sql2 = "INSERT INTO goods(name, price, cat_id, invnum, des) VALUES ('$name', '$price', '$cat_id', '$invnum', '$des') ";
+$sql2 = "INSERT INTO goods(name, price, cat_id, invnum, 'desc') VALUES ('$name', '$price', '$cat_id', '$invnum', '$desc') ";
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 
