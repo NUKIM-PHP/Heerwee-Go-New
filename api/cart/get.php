@@ -21,7 +21,9 @@ while($row = mysqli_fetch_assoc($result)){
 }
 
 $ids = join(',', $cart);
+echo $ids;
 $sql2 = "SELECT * FROM goods WHERE id in '$ids'";
+echo $sql2;
 $result = mysqli_query($link, $sql2);
 $cart = [];
 while($row = mysqli_fetch_assoc($result)){
