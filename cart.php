@@ -1,13 +1,14 @@
 <?php require_once('header.php'); ?>
-<?php $data = api('/cart/get.php');
+<?php
+	$data = api('/cart/get.php');
 	if($data->result != 0){
-		header('location: /');
-		exit();
+		//header('location: /');
+		//exit();
 	}
 ?>
 		<div class="content">
 			<div class="cart-wrapper">
-				<?php foreach ($data->cart as $good): ?>
+				<?php foreach ($data['cart'] as $good): ?>
 				<div class="product-cart">
 					<img src="/img/<?= $good->pic ?>.jpg" alt="" class="product-cart-pic">
 					<div class="product-cart-name"><?= $good->name ?></div>
