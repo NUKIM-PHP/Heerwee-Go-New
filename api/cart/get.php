@@ -27,10 +27,8 @@ $sql2 = "SELECT * FROM goods WHERE $condition";
 $result = mysqli_query($link, $sql2);
 $cart = [];
 $i = 0 ;
-echo $num[0];
 while($row = mysqli_fetch_assoc($result)){
-	$row->num = $num->$i++;
-	var_dump($row);
+	$row['num'] = $num->$i++;
 	array_push($cart, $row);
 }
 
