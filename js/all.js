@@ -18,6 +18,7 @@ $(function(){
 	$('#link-login').on('click', function(){
 		$('.login-wrapper').slideDown();
 		$('.login-box').hide(0).slideDown();
+		$('#login-user').focus();
 	});
 
 	$('#link-logout').on('click', function(){

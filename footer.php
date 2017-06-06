@@ -2,7 +2,7 @@
 			<div class="login-box">
 				<h2>會員登入</h2>
 				<div id="loginFailed">登入失敗！帳號密碼錯誤？</div>
-				<input type="text" id="login-user" placeholder="帳號">
+				<input type="text" id="login-user" placeholder="帳號" autofocus>
 				<input type="password" id="login-pass" placeholder="密碼">
 				<div class="button" id="button-login">登入</div>
 			</div>
