@@ -30,4 +30,42 @@ $(function(){
 			});
 		});
 	});
+
+	$('#delete-product').on('click', function(){
+		var num = $('input[type=checkbox]:checked');
+		$('input[type=checkbox]:checked').each(function(){
+			$.ajax({
+				url: '/api/goods/delete.php',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					id: $(this).data('id')
+				},
+				success: function(){
+					if(!--num){
+						location.reload();
+					}
+				}
+			});
+		});
+	});
+
+	$('#delete-event').on('click', function(){
+		var num = $('input[type=checkbox]:checked');
+		$('input[type=checkbox]:checked').each(function(){
+			$.ajax({
+				url: '/api/event/delete.php',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					id: $(this).data('id')
+				},
+				success: function(){
+					if(!--num){
+						location.reload();
+					}
+				}
+			});
+		});
+	});
 });
