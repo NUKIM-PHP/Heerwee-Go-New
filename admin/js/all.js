@@ -11,4 +11,23 @@ $(function(){
 			$(this).text('$' + num);
 		}
 	});
+
+	$('#delete-user').on('click', function(){
+		var num = $('input[type=checkbox]:checked');
+		$('input[type=checkbox]:checked').each(function(){
+			$.ajax({
+				url: '/api/user/del.php',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					id: $(this).data('id')
+				},
+				success: function(){
+					if(!--num){
+						location.reload();
+					}
+				}
+			});
+		});
+	});
 });
