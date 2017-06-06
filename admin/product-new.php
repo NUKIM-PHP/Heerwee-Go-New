@@ -58,5 +58,7 @@
 			</form>
 		</div>
 	</div>
+	<script src="https://unpkg.com/jquery"></script>
+	<script src="js/all.js"></script>
 </body>
 </html>
