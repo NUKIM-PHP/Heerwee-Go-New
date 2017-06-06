@@ -9,16 +9,18 @@
 ?>
 		<div class="content">
 			<div class="cart-wrapper">
+				<?php $total = 0;?>
 				<?php foreach ($data->carts as $good): ?>
 				<div class="product-cart">
 					<img src="/img/<?= $good->pic ?>.jpg" alt="" class="product-cart-pic">
 					<div class="product-cart-name"><?= $good->name ?></div>
 					<div class="product-cart-length"><?= $good->num ?></div>
-					<div class="product-cart-price money"><?= $good->price ?></div>
+					<div class="product-cart-price money"><?= $good->price * $good->num ?></div>
+
 				</div>
 				<?php endforeach;?>
 				<div class="amount-wrapper">
-					<div>折抵：<span id="discount" class="money">4252</span>元</div>
+					<div>折抵：<span id="discount" class="money">0</span>元</div>
 					<div>金額：<span id="amount" class="money">4252</span>元</div>
 				</div>
 				<div class="cart-buttons">
