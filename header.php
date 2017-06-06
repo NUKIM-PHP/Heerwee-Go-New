@@ -24,7 +24,7 @@
 			<div class="user-wrapper">
 				<div class="user">
 					<?php if(isset($_SESSION['user'])){ ?>
-					嗨，<?= $_SESSION['name'] ?>！
+					嗨，<?= $_SESSION['username'] ?>！
 					<a href="#" id="link-logout">登出</a>
 					<?php } else { ?>
 					<a href="#" id="link-login">登入</a>
