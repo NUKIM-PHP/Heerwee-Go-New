@@ -40,7 +40,7 @@
 				<div class="label">商品圖片</div>
 				<input type="file" name="upload">
 				<div class="label">價格</div>
-				<input type="text" name="price">
+				<input type="number" name="price">
 				<div class="label">分類</div>
 				<select name="cat_id">
 					<option value="1">WOMEN</option>
