@@ -14,7 +14,7 @@ function initSlider(){
 	}, 3000);
 }
 $(function(){
-	initSlider();
+	if( $('#event').length ) initSlider();
 
 	$('#link-login').on('click', function(){
 		$('.login-wrapper').slideDown();

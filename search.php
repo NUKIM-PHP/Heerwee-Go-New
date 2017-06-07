@@ -12,11 +12,13 @@
 				echo '<h2>沒有關於' . $s . '的搜尋結果';
 			}else{
 			foreach ($data->goods as $good): ?>
-			<div class="product-catalog product animated fadeIn" data-gid="<?= $good->id?>">
-				<img src="/img/<?= $good->pic ?>.jpg" alt="">
-				<div class="product-name"><?= $good->name?></div>
-				<div class="product-price"><?= $good->price?></div>
-			</div>
+			<a href="/product.php?id=<?= $good->id; ?>">
+				<div class="product-catalog product animated fadeIn" data-gid="<?= $good->id?>">
+					<img src="/img/<?= $good->pic ?>.jpg" alt="">
+					<div class="product-name"><?= $good->name?></div>
+					<div class="product-price"><?= $good->price?></div>
+				</div>
+			</a>
 			<?php endforeach;
 			}
 			?>
