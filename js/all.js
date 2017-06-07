@@ -2,9 +2,7 @@
 function initSlider(){
 	// var jsImg = ['img/event_1.png', 'img/event_2.png', 'img/event_3.png', 'img/event_4.png'];
 	var jsImg_len;
-	if(jsImg){
-		jsImg_len = jsImg.length;
-	}
+	jsImg_len = jsImg.length;
 	var i=0;
 	$('#events').attr('src', jsImg[i]);
 	i++;
