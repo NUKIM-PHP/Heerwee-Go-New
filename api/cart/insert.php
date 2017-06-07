@@ -31,8 +31,8 @@ $sql2 = "SELECT * FROM cart WHERE g_id = '$g_id' AND u_id = '$u_id'";
 $result = mysqli_query($link, $sql2);
 $row = mysqli_fetch_assoc($result);
 
-if(isset($row)){
-	$q = $row['num'];
+if(count($row)){
+	$q = $row['num'] + $num;
 	$sql2 = "UPDATE cart SET `num` = '$q'";
 	$result = mysqli_query($link, $sql2);
 }else{
