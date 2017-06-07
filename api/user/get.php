@@ -27,7 +27,7 @@ $result = mysqli_query($link, $sql2);
 $row = mysqli_fetch_assoc($result);
 mysqli_close($link);
 
-if(count($users)){
+if(isset($row)){
 	$data = [
 		result => 0,
 		user => $row
