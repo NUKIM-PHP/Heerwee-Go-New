@@ -33,7 +33,7 @@ $row = mysqli_fetch_assoc($result);
 
 if(count($row)){
 	$q = $row['num'] + $num;
-	$sql2 = "UPDATE cart SET `num` = '$q'";
+	$sql2 = "UPDATE cart SET `num` = '$q' WHERE g_id = '$g_id' AND u_id = '$u_id'";
 	$result = mysqli_query($link, $sql2);
 }else{
 	$sql2 = "INSERT INTO cart (g_id, num, u_id) VALUES('$g_id', '$num', '$u_id')";
