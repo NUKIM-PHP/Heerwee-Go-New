@@ -3,10 +3,9 @@ require('../../connection.php');
 header('Content-type: application/json');
 
 $id = $_POST['id'];
-$u_id = $_SESSION['user'];
 
 if(isset($id)){
-	$sql2 = "DELETE FROM invoice WHERE id = '$id' AND u_id = '$u_id'";
+	$sql2 = "DELETE FROM invoice WHERE id = '$id'";
 	mysqli_query($link, $sql2);
 	mysqli_close($link);
 	$data = [
