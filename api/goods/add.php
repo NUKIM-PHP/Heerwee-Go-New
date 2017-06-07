@@ -27,8 +27,8 @@ if(
 
 $name = pathinfo($pic['name']);
 $t = time();
-move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.jpg');
-$pic = $t . $name . '.jpg';
+move_uploaded_file($pic['tmp_name'], '../../images/' . $t . '.jpg');
+$pic = $t . '.jpg';
 
 $sql2 = "INSERT INTO goods(name, price, cat_id, invnum, `desc`) VALUES ('$goodname', '$price', '$cat_id', '$invnum', '$desc') ";
 $result = mysqli_query($link, $sql2);

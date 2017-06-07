@@ -25,8 +25,8 @@ if(
 
 $name = pathinfo($pic['name']);
 $t = time();
-move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.' . $name['extension']);
-$pic = $t . $name . '.' . $name['extension'];
+move_uploaded_file($pic['tmp_name'], '../../images/' . $t . '.' . $name['extension']);
+$pic = $t . '.' . $name['extension'];
 
 $sql2 = "INSERT INTO event (`name`, `cat_id`, `pic`, `startdate`, `duedate`) VALUES('$eventname', '$cat_id', '$pic', '$startdate', '$duedate')";
 $result = mysqli_query($link, $sql2);
