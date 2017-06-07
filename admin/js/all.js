@@ -82,6 +82,6 @@ $(function(){
 			contentType: false,
 			processData: false
 		});
-		location.href('/admin/products.php');
+		location.href = '/admin/products.php';
 	});
 });
