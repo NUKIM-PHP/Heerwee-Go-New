@@ -8,7 +8,7 @@ function initSlider(){
 	if(i>=jsImg_len)  i=0;
 	setInterval(function(){
 		$('#events').attr('src', jsImg[i]);
-		$('#events').parent().attr('href', jsLink[i]);
+		$($('#events').parent()[0]).attr('href', jsLink[i]);
 		i++;
 		if(i>=jsImg_len)  i=0;
 	}, 3000);
