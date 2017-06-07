@@ -16,22 +16,30 @@ if(!isset($u_id)){
 
 $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
-$condition = '';
-$num = [];
 while($row = mysqli_fetch_assoc($result)){
-	$condition .= ' id = ' . $row['g_id'] . ' OR ';
-	array_push($num, $row['num']);
+	$g_id = $row['g_id'];
+	$sql2 = "SELECT * FROM goods WHERE g_id = '$g_id'";
+	$result2 = mysqli_query($link, $sql2);
+	$row2 = mysqli_fetch_assoc($result2);
+	$row2['num'] = $row['num'];
+	array_push($cart, $row2);
 }
-$condition .= '0';
+// $condition = '';
+// $num = [];
+// while($row = mysqli_fetch_assoc($result)){
+// 	$condition .= ' id = ' . $row['g_id'] . ' OR ';
+// 	array_push($num, $row['num']);
+// }
+// $condition .= '0';
 
-$sql2 = "SELECT * FROM goods WHERE $condition";
-$result = mysqli_query($link, $sql2);
-$cart = [];
-$i = 0 ;
-while($row = mysqli_fetch_assoc($result)){
-	$row['num'] = $num[$i++];
-	array_push($cart, $row);
-}
+// $sql2 = "SELECT * FROM goods WHERE $condition";
+// $result = mysqli_query($link, $sql2);
+// $cart = [];
+// $i = 0 ;
+// while($row = mysqli_fetch_assoc($result)){
+// 	$row['num'] = $num[$i++];
+// 	array_push($cart, $row);
+// }
 
 
 if(count($cart)){
