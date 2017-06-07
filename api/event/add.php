@@ -29,7 +29,6 @@ move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.' . $name[
 $pic = $t . $name . '.' . $name['extension'];
 
 $sql2 = "INSERT INTO event (`name`, `cat_id`, `pic`, `startdate`, `duedate`) VALUES('$eventname', '$cat_id', '$pic', '$startdate', '$duedate')";
-echo $sql2;
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 

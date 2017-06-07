@@ -40,13 +40,13 @@
 				<div class="label">商品圖片</div>
 				<input type="file" name="upload">
 				<div class="label">活動分類</div>
-				<select>
-					<option name="cat_id" value="1">WOMEN</option>
-					<option name="cat_id" value="2">MEN</option>
-					<option name="cat_id" value="3">KIDS</option>
-					<option name="cat_id" value="4">BABY</option>
-					<option name="cat_id" value="5">SPORTS</option>
-					<option name="cat_id" value="6">STYLE</option>
+				<select name="cat_id">
+					<option value="1">WOMEN</option>
+					<option value="2">MEN</option>
+					<option value="3">KIDS</option>
+					<option value="4">BABY</option>
+					<option value="5">SPORTS</option>
+					<option value="6">STYLE</option>
 				</select>
 				<div class="label">開始日期</div>
 				<input type="date" name="startdate">
