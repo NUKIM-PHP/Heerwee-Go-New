@@ -9,6 +9,13 @@
 		<div class="content">
 			<div class="slider">
 				<img id="events" src="img/event_1.png"></div>
+				<?php
+				$e1 = $data->events[0]->pic;
+				$e2 = $data->events[1]->pic;
+				$e3 = $data->events[2]->pic;
+				$e4 = $data->events[3]->pic;
+				echo "var jsImg = ['img/$e1', 'img/$e2', 'img/$e3', 'img/$e4'];";
+				?>
 			</div>
 			<div class="products-home">
 				<div class="products-home-container">
