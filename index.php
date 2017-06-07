@@ -14,7 +14,7 @@
 				$e2 = $data->events[1]->pic;
 				$e3 = $data->events[2]->pic;
 				$e4 = $data->events[3]->pic;
-				echo "var jsImg = ['img/$e1', 'img/$e2', 'img/$e3', 'img/$e4'];";
+				echo "<script>var jsImg = ['img/$e1', 'img/$e2', 'img/$e3', 'img/$e4'];</script>";
 				?>
 			</div>
 			<div class="products-home">
