@@ -92,12 +92,11 @@ $(function(){
 
 	$('#register-form').on('submit', function(e){
 		e.preventDefault();
-		var formData = new FormData($(this)[0]);
 		$.ajax({
 			url: '/api/user/add.php',
 			method: 'POST',
 			dataType: 'json',
-			data: formData,
+			data: $(this).serialize(),
 			success: function(data){
 				if(data.result === 0){
 					location.replace('/');
