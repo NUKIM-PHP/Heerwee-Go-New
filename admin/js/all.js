@@ -69,7 +69,7 @@ $(function(){
 		});
 	});
 
-	$('#delete-event').on('click', function(){
+	$('#delete-invoice').on('click', function(){
 		var num = $('input[type=checkbox]:checked');
 		$('input[type=checkbox]:checked').each(function(){
 			$.ajax({
