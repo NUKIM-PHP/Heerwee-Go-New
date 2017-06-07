@@ -48,7 +48,9 @@ while ($row = mysql_fetch_assoc($result)) {
     $total += $row2["price"]*$row["num"];
 }
 
-
+$sql2 = "UPDATE invoice WHERE i_id=$i_id SET totalamount='$total'";
+$result = mysqli_query($link, $sql2);
+mysqli_close($link);
 
 $data = [
 	result => 0
