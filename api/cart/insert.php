@@ -27,9 +27,18 @@ if(
 	exit();
 }
 
-
-$sql2 = "INSERT INTO cart (g_id, num, u_id) VALUES('$g_id', '$num', '$u_id')";
+$sql2 = "SELECT * FROM cart WHERE g_id = '$g_id' AND u_id = '$u_id'";
 $result = mysqli_query($link, $sql2);
+$row = mysqli_fetch_assoc($result);
+
+if(isset($row)){
+	$q = $row['num'];
+	$sql2 = "UPDATE cart SET `num` = '$q'";
+	$result = mysqli_query($link, $sql2);
+}else{
+	$sql2 = "INSERT INTO cart (g_id, num, u_id) VALUES('$g_id', '$num', '$u_id')";
+	$result = mysqli_query($link, $sql2);
+}
 mysqli_close($link);
 
 $data = [
