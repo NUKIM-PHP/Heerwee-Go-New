@@ -25,33 +25,33 @@
 			<div class="products-home">
 				<div class="products-home-container">
 					<div class="product-home product animated fadeIn" id="product-home-1">
-						<img src="img/product1.jpg" alt="">
+						<a href="/product.php?id=2"><img src="img/product1.jpg" alt=""></a>
 					</div>
 					<div class="product-home product animated fadeIn" id="product-home-2">
-						<img src="img/product3.jpg" alt="">
+						<a href="/product.php?id=1"><img src="img/product3.jpg" alt=""></a>
 					</div>
 				</div>
 				<div class="products-home-container">
 					<div class="product-home product animated fadeIn" id="product-home-3">
-						<img src="img/product2.jpg" alt="">
+						<a href="/product.php?id=14"><img src="img/product2.jpg" alt=""></a>
 					</div>
 					<div class="product-home product animated fadeIn" id="product-home-4">
-						<img src="img/product4.jpg" alt="">
+						<a href="/product.php?id=18"><img src="img/product4.jpg" alt=""></a>
 					</div>
 				</div>
 			</div>
 			<div class="series-container">
 				<div class="series product animated fadeIn">
-					<img src="img/series_1.jpg" alt="">
+					<a href="/product.php?id=21"><img src="img/series_1.jpg" alt=""></a>
 				</div>
 				<div class="series product animated fadeIn">
-					<img src="img/series_2.jpg" alt="">
+					<a href="/product.php?id=24"><img src="img/series_2.jpg" alt=""></a>
 				</div>
 				<div class="series product animated fadeIn">
-					<img src="img/series_3.jpg" alt="">
+					<a href="/product.php?id=23"><img src="img/series_3.jpg" alt=""></a>
 				</div>
 				<div class="series product animated fadeIn">
-					<img src="img/series_4.jpg" alt="">
+					<a href="/product.php?id=10"><img src="img/series_4.jpg" alt=""></a>
 				</div>
 			</div>
 		</div>
