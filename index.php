@@ -17,7 +17,7 @@
 				$l2 = '/category.php?id=' . $data->events[1]->cat_id;
 				$l3 = '/category.php?id=' . $data->events[2]->cat_id;
 				$l4 = '/category.php?id=' . $data->events[3]->cat_id;
-				echo '<a href="#"><img id="events" src="img/' . $e1 . '"></a>';
+				echo '<a href="'.$l1.'"><img id="events" src="img/' . $e1 . '"></a>';
 				echo "<script>var jsImg = ['img/$e1', 'img/$e2', 'img/$e3', 'img/$e4'];</script>";
 				echo "<script>var jsLink = ['$l1', '$l2', '$l3', '$l4']</script>";
 				?>
