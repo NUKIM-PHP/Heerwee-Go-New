@@ -19,7 +19,7 @@ $result = mysqli_query($link, $sql2);
 $cart = [];
 while($row = mysqli_fetch_assoc($result)){
 	$g_id = $row['g_id'];
-	$sql2 = "SELECT * FROM goods WHERE g_id = '$g_id'";
+	$sql2 = "SELECT * FROM goods WHERE id = '$g_id'";
 	$result2 = mysqli_query($link, $sql2);
 	$row2 = mysqli_fetch_assoc($result2);
 	$row2['num'] = $row['num'];
