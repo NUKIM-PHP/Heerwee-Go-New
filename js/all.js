@@ -96,7 +96,7 @@ $(function(){
 		$.ajax({
 			url: '/api/user/add.php',
 			method: 'POST',
-			dataType: 'ajax',
+			dataType: 'json',
 			data: formData,
 			success: function(data){
 				if(data.result === 0){

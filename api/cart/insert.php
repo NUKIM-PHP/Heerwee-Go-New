@@ -16,7 +16,7 @@ if(!isset($_SESSION['user'])){
 }
 
 if(
-	!isset($g_id) || 
+	!isset($g_id) ||
 	!isset($num)
 ){
 	$data = [
