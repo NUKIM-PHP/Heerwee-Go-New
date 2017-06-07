@@ -2,14 +2,14 @@
 require('../../connection.php');
 header('Content-type: application/json');
 
-$name = $_POST['name'];
+$eventname = $_POST['name'];
 $cat_id = $_POST['cat_id'];
 $startdate = $_POST['startdate'];
 $duedate = $_POST['duedate'];
 $pic = $_FILES['upload'];
 
 if(
-	!isset($name) ||
+	!isset($eventname) ||
 	!isset($cat_id) ||
 	!isset($startdate) ||
 	!isset($duedate) ||
@@ -28,7 +28,7 @@ $t = time();
 move_uploaded_file($pic['tmp_name'], '../../images/' . $t . $name . '.' . $name['extension']);
 $pic = $t . $name . '.' . $name['extension'];
 
-$sql2 = "INSERT INTO event ('name', 'cat_id', 'pic', 'startdate', 'duedate') VALUES('$name', '$cat_id', '$pic', '$startdate', '$duedate')";
+$sql2 = "INSERT INTO event ('name', 'cat_id', 'pic', 'startdate', 'duedate') VALUES('$eventname', '$cat_id', '$pic', '$startdate', '$duedate')";
 $result = mysqli_query($link, $sql2);
 mysqli_close($link);
 

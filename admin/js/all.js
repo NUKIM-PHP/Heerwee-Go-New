@@ -84,4 +84,20 @@ $(function(){
 		});
 		location.href = '/admin/products.php';
 	});
+
+	$('#form-add-product').on('submit', function(e){
+		e.preventDefault();
+		var formData = new FormData($(this)[0]);
+		$.ajax({
+			url: '/api/event/add.php',
+			method: 'POST',
+			dataType: 'json',
+			async: false,
+			data: formData,
+			cache: false,
+			contentType: false,
+			processData: false
+		});
+		location.href = '/admin/events.php';
+	});
 });
