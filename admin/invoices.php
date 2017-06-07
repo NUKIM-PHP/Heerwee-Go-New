@@ -5,6 +5,11 @@
 	function api($path){
 		return json_decode(file_get_contents('https://nukim-php.noob.tw/api' . $path));
 	}
+	$data = api('/invoice/getAllAdmin.php');
+	if($data->result != 0){
+		header('location: /');
+		exit();
+	}
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
@@ -34,7 +39,44 @@
 			</nav>
 		</header>
 		<div class="content">
-			
+			<a href="product-new.php">新增商品</a>
+			<a href="#" id="delete-product">刪除</a>
+			<table>
+				<thead>
+					<tr>
+						<td></td>
+						<td>編號</td>
+						<td>買家</td>
+						<td>運送方式</td>
+						<td>運送地址</td>
+						<td>收件人姓名</td>
+						<td>總金額</td>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach($data->invoices as $invoice): ?>
+					<tr>
+						<td><input type="checkbox" data-id="<?= $invoice->id;?>"></td>
+						<td><?= $invoice->id; ?></td>
+						<td><?= api('/user/get.php?id='.$invoice->u_id)->user->name; ?></td>
+						<td><?php
+						switch($invoice->shipmethod){
+							case 'home':
+								echo '宅配到府';
+								break;
+							case 'seveneleven':
+								echo '7-ELEVEn取貨';
+								break;
+							case 'familymart':
+								echo '全家取貨';
+						}?></td>
+						<td><?= $invoice->shipaddress; ?></td>
+						<td><?= $invoice->r_name; ?></td>
+						<td><?= $invoice->totalamount; ?></td>
+					</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<script src="https://unpkg.com/jquery"></script>
