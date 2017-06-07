@@ -1,4 +1,11 @@
 <?php require_once('header.php'); ?>
+<?php
+	$data = api("/event/get.php");
+	if($data->result != 0){
+		header('location: /');
+		exit();
+	}
+?>
 		<div class="content">
 			<div class="slider">
 				<img id="events" src="img/event_1.png"></div>
@@ -6,18 +13,18 @@
 			<div class="products-home">
 				<div class="products-home-container">
 					<div class="product-home product animated fadeIn" id="product-home-1">
-						<img src="img/product1.jpg" alt="">
+						<img src="img/<?= $data->events[0]->pic; ?>" alt="">
 					</div>
 					<div class="product-home product animated fadeIn" id="product-home-2">
-						<img src="img/product3.jpg" alt="">
+						<img src="img/<?= $data->events[2]->pic; ?>" alt="">
 					</div>
 				</div>
 				<div class="products-home-container">
 					<div class="product-home product animated fadeIn" id="product-home-3">
-						<img src="img/product2.jpg" alt="">
+						<img src="img/<?= $data->events[1]->pic; ?>" alt="">
 					</div>
 					<div class="product-home product animated fadeIn" id="product-home-4">
-						<img src="img/product4.jpg" alt="">
+						<img src="img/<?= $data->events[3]->pic; ?>" alt="">
 					</div>
 				</div>
 			</div>
