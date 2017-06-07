@@ -85,7 +85,7 @@ $(function(){
 		location.href = '/admin/products.php';
 	});
 
-	$('#form-add-product').on('submit', function(e){
+	$('#form-add-event').on('submit', function(e){
 		e.preventDefault();
 		var formData = new FormData($(this)[0]);
 		$.ajax({
