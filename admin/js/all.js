@@ -98,6 +98,6 @@ $(function(){
 			contentType: false,
 			processData: false
 		});
-		location.href = '/admin/events.php';
+		// location.href = '/admin/events.php';
 	});
 });
