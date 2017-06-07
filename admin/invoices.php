@@ -39,7 +39,7 @@
 			</nav>
 		</header>
 		<div class="content">
-			<a href="#" id="delete-product">刪除</a>
+			<a href="#" id="delete-invoice">刪除</a>
 			<table>
 				<thead>
 					<tr>
@@ -71,7 +71,7 @@
 						}?></td>
 						<td><?= $invoice->shipaddress; ?></td>
 						<td><?= $invoice->r_name; ?></td>
-						<td><?= $invoice->totalamount; ?></td>
+						<td class="money"><?= $invoice->totalamount; ?></td>
 					</tr>
 					<?php endforeach; ?>
 				</tbody>

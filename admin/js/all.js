@@ -69,6 +69,25 @@ $(function(){
 		});
 	});
 
+	$('#delete-event').on('click', function(){
+		var num = $('input[type=checkbox]:checked');
+		$('input[type=checkbox]:checked').each(function(){
+			$.ajax({
+				url: '/api/invoice/delete.php',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					id: $(this).data('id')
+				},
+				success: function(){
+					if(!--num){
+						location.reload();
+					}
+				}
+			});
+		});
+	});
+
 	$('#form-add-product').on('submit', function(e){
 		e.preventDefault();
 		var formData = new FormData($(this)[0]);
