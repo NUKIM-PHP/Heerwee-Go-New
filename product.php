@@ -13,7 +13,7 @@
 			<div class="product-meta">
 				<div class="product-desc"><?= $data->good->desc ?></div>
 				<div class="product-price money"><?= $data->good->price ?></div>
-				<div class="product-length">數量<input type="number" id="product-length"><span class="button" id="addtocart" data-gid="<?= $data->good->id ?>">加入購物車</span></div>
+				<div class="product-length">數量<input type="number" id="product-length" min="0"><span class="button" id="addtocart" data-gid="<?= $data->good->id ?>">加入購物車</span></div>
 			</div>
 		</div>
 <?php require_once('footer.php'); ?>
