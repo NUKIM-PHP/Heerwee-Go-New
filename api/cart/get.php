@@ -16,6 +16,7 @@ if(!isset($u_id)){
 
 $sql2 = "SELECT * FROM cart WHERE u_id='$u_id'";
 $result = mysqli_query($link, $sql2);
+$cart = [];
 while($row = mysqli_fetch_assoc($result)){
 	$g_id = $row['g_id'];
 	$sql2 = "SELECT * FROM goods WHERE g_id = '$g_id'";
