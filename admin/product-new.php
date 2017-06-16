@@ -30,6 +30,7 @@
 					<li><a href="users.php">使用者管理</a></li>
 					<li><a href="events.php">活動管理</a></li>
 					<li><a href="invoices.php">訂單管理</a></li>
+					<li><a href="data.php">分析整理</a></li>
 				</ul>
 			</nav>
 		</header>

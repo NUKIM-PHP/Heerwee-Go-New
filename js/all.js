@@ -15,7 +15,7 @@ function initSlider(){
 	}, 3000);
 }
 $(function(){
-	if( $('#event').length ) initSlider();
+	if( $('#events').length ) initSlider();
 
 	$('#link-login').on('click', function(){
 		$('.login-wrapper').slideDown();
@@ -123,5 +123,9 @@ $(function(){
 
 	$('#button-back').on('click', function(){
 		location.href = '/';
+	});
+
+	$('#pay').on('click',function(){
+		location.href = 'pay.php';
 	});
 });
